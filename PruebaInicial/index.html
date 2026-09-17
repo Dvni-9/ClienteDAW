@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Estudios - Matrícula</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+            <header>
+                <h1>CENTRO DE ESTUDIOS</h1>
+                <h2>VALLADOLID</h2>
+            </header>
+
+
+                <legend>DATOS PARA LA MATRÍCULA</legend>
+                <form target="_blank" action="https://aulavirtual.educa.jcyl.es/iesjulianmarias/my/courses.php" method="post" enctype="multipart/form-data"><!--Es muy importante poner un enctype corrcto (en este caso este para la multimedia) para que el servidor pueda leer correctamente el formulario -->
+                    <section>
+                        <label>Nombre*:</label>
+                        <input type="text" name="nombre" size="35" required>
+                    </section>
+
+                    <section>
+                        <label>Apellidos*:</label>
+                        <input type="text" name="apellidos" size="48" required>
+                    </section>
+
+                    <section>
+                        <label>Dirección:</label>
+                        <input type="text" name="direccion" size="65" placeholder="Calle, número, piso, letra, ...">
+                    </section>
+
+                    <section>
+                        <label>Sexo:</label>
+                        <input type="radio" name="sexo" value="mujer"> Mujer
+                        <input type="radio" name="sexo" value="hombre"> Hombre
+                    </section>
+
+                    <section>
+                        <label>Fotografía:</label>
+                        <input type="file" name="fotografia">
+                    </section>
+
+                    <section>
+                        <label>Modalidad:</label><br>
+                        <input type="radio" name="modalidad" value="distancia"> Distancia
+                    </section>
+
+                    <ul>    
+                        <li><input type="checkbox" name="lenguajes_marcas"> Lenguajes de marcas</li>
+                        <li><input type="checkbox" name="programacion"> Programación</li>
+                        <li><input type="checkbox" name="bases_datos"> Bases de Datos</li>
+                    </ul>   
+
+                    <section>
+                        <input type="radio" name="modalidad" value="presencial" checked> Presencial
+                    </section>
+
+                    <section>
+                        <label>Curriculum :</label>
+                        <input type="file" name="curriculum">
+                    </section>
+
+                    <section>
+                        <label>Idioma:</label>
+                        <select name="idioma">
+                            <option value="ingles" selected>Inglés</option>
+                            <option value="espanol">Español</option>
+                            <option value="frances">Francés</option>
+                            <option value="aleman">Alemán</option>
+                        </select>
+                    </section>
+
+                    <section>
+                        <label>Breve descripción personal:</label><br>
+                        <textarea name="descripcion" rows="4" cols="45" placeholder="Utilice este cuadro para escribir"></textarea>
+                    </section>
+
+                    <section>
+                        <label>Fecha:</label>
+                        <input type="date" name="fecha" value="2022-01-31">
+                    </section>
+
+                    <section>
+                        <label>Hora:</label>
+                        <input type="time" name="hora" value="15:30">
+                    </section>
+                
+                    <section>
+                        <input type="submit" value="Enviar">
+                    </section>
+                </form>
+        
+    </main>
+</body>
+</html>

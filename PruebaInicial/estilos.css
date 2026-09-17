@@ -1,0 +1,94 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: #ecfe9e;
+    width: 720px;
+    padding: 20px;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #7b3fe4;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 26px;
+    margin: 5px 0;
+}
+
+h2 {
+    color: red;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    margin: 5px 0 15px 0;
+}
+
+fieldset {
+    border: 1px solid #888;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    color: #3b5c2a;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+label {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    background-color: #06fcff;
+    border: 1px solid #444;
+    padding: 2px 4px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 4px 0 4px 20px;
+    padding: 0;
+}
+
+li {
+    margin: 3px 0;
+}
+
+textarea {
+    background-color: #c9caf9;
+    border: 1px solid #555;
+    padding: 4px;
+    margin-top: 4px;
+    font-family: Arial, sans-serif;
+}
+
+input[type="submit"] {
+    background-color: #e4e4e4;
+    border: 1px solid #777;
+    padding: 3px 12px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d4d4d4;
+}
