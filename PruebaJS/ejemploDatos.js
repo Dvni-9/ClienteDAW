@@ -69,6 +69,31 @@ let a1 = 1;
         console.log(a4);
     }
 })();
+// fvar();
+{
+    var a2=2;
+    console.log(a1);
+    console.log(a2);
+    fvar();
+    // console.log(a3); // si llamas a una variable declarada con var fuera del ambito donde se ha declarado, te da error, porque no existe.
+                    // incluso si llamamos primero a la funcion que la contiene, nos da error, porque no existe en el ambito global.
+}
+function fvar(){
+    var a3=3;
+    console.log(a1);
+    console.log(a2);
+    console.log(a3);
+    if(true){
+        var a4=4;
+        console.log(a1);
+        console.log(a2+" a2 DE VAR");
+        console.log(a3+" a3 DE VAR");
+        console.log(a4+" a4 DE VAR");
+    }
+}
+//la principal diferencia es que las variables declaradas con var tienen un ambito global, mientras que las declaradas con let tienen un ambito local.
+
+
 function f2(){
     let a5="Si funciona así";
     console.log(a5);
@@ -81,3 +106,29 @@ function f3(){
 }
 f3();
 console.log(a1); //a1 es 1, la funcion f3 tiene su propio ambito y no afecta a la variable a1 que esta fuera de la funcion.
+
+const a6={
+    huevos:function(){
+        console.log("me han tirado un huevo");
+    }
+};
+a6.huevos();//si declaras la funcion dentro de un objeto, para ejecutarla hay que poner el nombre del objeto y el nombre de la funcion
+console.log(a6);
+
+
+console.log("");
+console.log(posterior);
+var posterior=10;
+console.log(posterior);
+// console.log(letposterior);
+let letposterior=20;
+console.log(letposterior);
+
+let a10=1;
+console.log(a10);
+(function f10(){
+    var a10=2;
+    console.log(a10);
+})();
+console.log(a10);//aunque llamemos let fuera de la funcion, y var dentro de la funcion, no se sobreescribe el valor de a10, porque var no 
+                //no sobreescribe el valor de la variable si esta ya tiene uno a nivel global.
