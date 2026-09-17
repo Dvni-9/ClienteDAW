@@ -132,3 +132,19 @@ console.log(a10);
 })();
 console.log(a10);//aunque llamemos let fuera de la funcion, y var dentro de la funcion, no se sobreescribe el valor de a10, porque var no 
                 //no sobreescribe el valor de la variable si esta ya tiene uno a nivel global.
+//====================================
+var alet=1;
+let alet=2;
+var alet=3;
+//====================================
+
+function f11(calabaza){
+    let a11=1+calabaza;
+    console.log(a11);
+}
+var calabaza = "calabaza";
+f11(calabaza);
+//la variable calabaza es global, y la variable calabaza que se pasa a la funcion f11 es local, por lo que no se sobreescribe el valor de la variable global.   
+
+//el let sí se sobreescribe en el if, ya que el var reemplaza el valor de la variable en todo el ambito en la que se la declara, pero el let solo en el ambito en el que se la declara, por lo que si se declara dentro de un if, 
+// solo se sobreescribe dentro del if, y fuera del if sigue teniendo el mismo valor que antes.
