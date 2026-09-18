@@ -1,0 +1,9 @@
+15/09/26
+-Hay que desplegar ambas partes, ya que tú como "cliente" mecesitas que esté desplegado la parte del código del cliente para poder acceder al servidor (el navegador es bobo, no sabe nada, solo leer HTML)
+-Preguntar la seguridad del cliente
+-JavaScript no puede guardar nada en servidor, tiene que enviárselas al servidor y que lo guarde el propio servidor
+-Cuando usa HTML necesito que pase por el navegador, cuando es un programa pequeño no es necesario
+-Subir un hola mundo en git desde casa y poder bajarlo aquí en 
+
+17/09/2026
+-L
