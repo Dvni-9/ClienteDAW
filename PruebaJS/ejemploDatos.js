@@ -152,12 +152,112 @@ f11(calabaza);
 //===================================================================
 //======22/09/26=====================================================
 //===================================================================
-var x= 1;
-x++;
-console.log(x+" x");
-var y =1;
-++y;
-console.log(y+" y");
+console.log("");
+console.log("22/09/26");
+console.log("Diferencia entre x++ y ++y");
+var inc= 1;
+inc++;
+console.log(inc+" inc");
+var inc1 =1;
+++inc1;
+console.log(inc1+" inc1");
 //la diferencia entre x++ y ++y es que x++ primero devuelve el valor de x y luego lo incrementa, mientras que ++y primero incrementa el valor de y y luego lo devuelve. Esto es útil para las operaciones en las que se necesita el valor antes de incrementarlo, como en los bucles for. 
 // Por ejemplo, si queremos recorrer un array y necesitamos el índice actual antes de incrementarlo, podemos usar x++. 
 // Si necesitamos el índice incrementado, podemos usar ++y.
+console.log("");
+console.log("Diferencia entre parseInt y parseFloat");
+let dec =parseInt(1.43);
+console.log(dec+" dec");
+let dec2 = parseInt(1.67);
+console.log(dec2+" dec2");
+//no redondea, sino que devuelve la parte entera del número, es decir, el número sin decimales.
+
+let dec3 = parseFloat(1.43);
+console.log(dec3+" dec3");
+let dec4 = parseFloat(1.67);
+console.log(dec4+" dec4");
+//parseFloat convierte una cadena en un número decimal, redondeando si es necesario.
+console.log("");
+console.log("Bases numéricas");
+let base = 10;
+console.log(base+" base");
+console.log(base.toString(2)+" base binaria ");
+console.log(base.toString(8)+" base octal ");
+console.log(base.toString(16)+" base hexadecimal ");
+console.log(base.toString()+" base decimal, deja la base por defecto, que es 10");
+
+console.log("");
+console.log("Probar eval");
+let pruebEval = eval("2+2");
+console.log(pruebEval+" pruebaEval");
+//eval evalua una cadena como si fuera código JavaScript, y devuelve el resultado de la evaluación. En este caso, evalua la cadena "2+2" y devuelve 4.
+let pruebEval2 = eval("2+parseInt(2+4)");
+console.log(pruebEval2+" pruebaEval2");
+//En este caso, evalua la cadena "2+parseInt(2+4)" y devuelve 8.
+let pruebEval3 = eval("console.log('Hola mundo')");
+//puedes poner un console.log dentro de un eval, y se ejecuta como si fuera código normal
+console.log("");
+console.log("Sintaxis de typeof");
+let taipof = "1";
+let taipof2 = 2;
+console.log(typeof taipof, typeof taipof2);
+console.log(taipof + taipof2 +" concatenación de string y número");
+
+if(taipof == taipof2){
+    console.log(taipof + taipof2);//aquí me lo suma porque cree que es el mismo tipo de dato.
+}
+
+
+if(taipof === taipof2){
+    console.log(taipof + taipof2);
+}
+console.log("");
+console.log("Operadores con distintos tipos de datos");
+let resta1 = "1";
+let resta2 = 2;
+console.log(resta1 - resta2 + " resta");//aquí me lo resta porque cree que es el mismo tipo de dato.
+
+
+let prod = "1";
+let prod2 = 2;
+console.log(prod * prod2 + " producto");//aquí me lo multiplica porque cree que es el mismo tipo de dato.
+
+let div = "1";
+let div2 = 2;
+console.log(div / div2 + " división");//aquí me lo divide porque cree que es el mismo tipo de dato.
+
+
+let restaString = "1";
+let restaString2 = "2";
+console.log(restaString - restaString2 + " resta de strings");//aquí me lo resta porque cree que es el mismo tipo de dato, aunque sean strings, los convierte a números y los resta.
+console.log("")
+console.log("booleanos");   
+let booleano1 = true;
+let booleano2 = false;
+console.log(booleano1 + booleano2 + " suma de booleanos");//aquí me lo suma porque cree que es el mismo tipo de dato, aunque sean booleanos, los convierte a números y los suma.
+console.log(booleano1 - booleano2 + " resta de booleanos");//aquí me lo resta porque cree que es el mismo tipo de dato, aunque sean booleanos, los convierte a números y los resta.
+console.log(true + true + " suma de booleanos");
+console.log(false + false + " suma de booleanos");
+
+console.log("")
+console.log("Comparaciones especiales"); 
+console.log("??", true ==1);
+console.log(""==0);
+console.log(""==false);
+console.log("0"==false);
+console.log("0"==0);
+
+console.log("??", true ===1);
+console.log("0"===0);
+console.log(""===false);
+console.log(""===0);
+
+
+console.log("")
+console.log("Arrays");
+
+
+
+
+
+
