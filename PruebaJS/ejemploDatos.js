@@ -133,9 +133,9 @@ console.log(a10);
 console.log(a10);//aunque llamemos let fuera de la funcion, y var dentro de la funcion, no se sobreescribe el valor de a10, porque var no 
                 //no sobreescribe el valor de la variable si esta ya tiene uno a nivel global.
 //====================================
-var alet=1;
+/* var alet=1;
 let alet=2;
-var alet=3;
+var alet=3; */
 //====================================
 
 function f11(calabaza){
@@ -148,3 +148,16 @@ f11(calabaza);
 
 //el let sí se sobreescribe en el if, ya que el var reemplaza el valor de la variable en todo el ambito en la que se la declara, pero el let solo en el ambito en el que se la declara, por lo que si se declara dentro de un if, 
 // solo se sobreescribe dentro del if, y fuera del if sigue teniendo el mismo valor que antes.
+
+//===================================================================
+//======22/09/26=====================================================
+//===================================================================
+var x= 1;
+x++;
+console.log(x+" x");
+var y =1;
+++y;
+console.log(y+" y");
+//la diferencia entre x++ y ++y es que x++ primero devuelve el valor de x y luego lo incrementa, mientras que ++y primero incrementa el valor de y y luego lo devuelve. Esto es útil para las operaciones en las que se necesita el valor antes de incrementarlo, como en los bucles for. 
+// Por ejemplo, si queremos recorrer un array y necesitamos el índice actual antes de incrementarlo, podemos usar x++. 
+// Si necesitamos el índice incrementado, podemos usar ++y.
