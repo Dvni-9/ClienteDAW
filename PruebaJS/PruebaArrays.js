@@ -1,7 +1,7 @@
 console.log("Arrays");
 let lista1 = new Array();
-let lista2 = Array();
-let lista3 = [];
+// let lista2 = Array();
+// let lista3 = [];
 
 lista1[0] = 1;
 // lista1[1] = 1;
@@ -37,4 +37,52 @@ persona.apellido = Lopez; */
     console.log(Object.keys(persona).filter(key=>NaN(key)[i]));
     console.log(persona[Object.keys(persona).filter(key=>NaN(key))]);
 } */
+
+console.log("");
+console.log("Matrices")
+
+let matrizprueba=[];
+matrizprueba[0]= [];
+matrizprueba[0][1]=2;
+console.log(matrizprueba[0][1] + " prueba de matrices");
+
+
+
+let matriz = [];
+const FILAS = 2;
+const COLUMNAS = 4;
+
+for (let i = 0; i < FILAS; i++) {//con este for hacemos que tenga solo dos filas
+    console.log("Fila "+i)
+    matriz[i] = []; 
+    for (let j = 0; j < COLUMNAS; j++) {
+        matriz[i][j] = i * COLUMNAS + j; //con esto lo que hacemos es darle el valor de de cada iteración de i*4 y le sumamos el valor de j para que no sea el mismo en cada
+                                         //posición, hasta columnas (4) y así
+        console.log(matriz[i][j]);
+    }
+}
+/* 
+for (let i = 0; i < matriz.length; i++) {
+    for (let j = 0; j < matriz[i].length; j++) {
+        console.log(matriz[i][j]);
+    }
+} */
+console.log("Matriz de clase")
+let tabla3=[1,2,3,["a","b"]];
+
+
+for (let i=0; i<tabla3.length; i++){
+
+        console.log("Fila "+i);
+        if(typeof tabla3[i]==="object"){
+            for (let j=0; j<tabla3[i].length; j++){
+                console.log("Columna "+j+ "| Valor "+ tabla3[i][j])
+            }
+        }else{
+                console.log( "| Valor "+ tabla3[i])
+        }
+        
+}
+
+
 
