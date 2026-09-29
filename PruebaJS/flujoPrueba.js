@@ -81,4 +81,4 @@ console.log(Math.ceil(2.3), Math.floor(2.7), Math.round(2.5));
 console.log(Math.pow(2, 3));
 console.log(Math.min(4, 1, 7), Math.max(4, 1, 7));
 console.log(Math.sqrt(25));
-console.log(Math.random()); // número aleatorio entre 0 y 1
+console.log(Math.random()); // número aleatorio SOLO entre 0 y 1
