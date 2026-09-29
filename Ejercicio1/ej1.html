@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="estiloEj1.css">
+</head>
+<body>
+    <script>
+        let filas = parseInt(prompt("Introduce el número de filas:"));
+        let columnas = parseInt(prompt("Introduce el número de columnas:"));
+
+        document.write("<table>");//esta mielda es para insertar el código html!!!
+
+        for (let i = 0; i < filas; i++) {
+            document.write("<tr>");
+            for (let j = 0; j < columnas; j++) {
+                document.write("<td>" + i + "," + j + "</td>");
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</body>
+</html>
