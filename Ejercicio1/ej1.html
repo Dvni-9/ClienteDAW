@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1</title>
-    <link rel="stylesheet" href="estiloEj1.css">
 </head>
 <body>
     <script>
-        let filas = parseInt(prompt("Introduce el número de filas:"));
+        let filas = parseInt(prompt("Introduce el número de filas:"));//el parseint para forzarlo a que sea un string
         let columnas = parseInt(prompt("Introduce el número de columnas:"));
 
-        document.write("<table>");//esta mielda es para insertar el código html!!!
+        document.write("<table border='1'>");//esta mielda es para insertar el código html!!!
 
         for (let i = 0; i < filas; i++) {
             document.write("<tr>");
@@ -20,7 +19,6 @@
             }
             document.write("</tr>");
         }
-
         document.write("</table>");
     </script>
 </body>
