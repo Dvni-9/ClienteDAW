@@ -25,7 +25,6 @@ function comprobar(titulo, dato, expr) {
     document.write("</p>");
 }
 
-//el document.getElementById
 comprobar("Nombre", nombre, /^[A-Z][a-zA-Z]*( [a-zA-Z]+)*$/);
 comprobar("Apellidos", apellidos, /^[A-Z][a-zA-Z]*( [a-zA-Z]+)*$/);
 comprobar("Edad", edad, /^\d{1,3}$/);
