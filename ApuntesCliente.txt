@@ -5,5 +5,8 @@
 -Cuando usa HTML necesito que pase por el navegador, cuando es un programa pequeño no es necesario
 -Subir un hola mundo en git desde casa y poder bajarlo aquí en 
 
-17/09/2026
--L
+06/10/2026
+-El document.getElementbyId nos permite ir al alrchivo html y buscar un elemento que se llame de esa forma,
+para ello es importante llamar a un elemento (un div o lo que sea) de la forma en la que queramos que se llame
+Y le añade lo que nosotros le metamos como elemento .innerHTML, es importante ponerle una etiqueta, pero más
+importante es hacerlo con +=, porque si ponemos igual solo, lo sobreescribe todo el rato

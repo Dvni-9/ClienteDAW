@@ -20,10 +20,12 @@ function comprobar(titulo, dato, expr) {
     let resultado = expr.test(dato || "");
     document.write("<p>" + titulo + ": " + resultado);
     if (!resultado) {
-        document.write(" - El campo no cumple con las especificaciones.");
+        document.write("- El campo no cumple con las especificaciones.");
     }
     document.write("</p>");
 }
+
+//el document.getElementById
 comprobar("Nombre", nombre, /^[A-Z][a-zA-Z]*( [a-zA-Z]+)*$/);
 comprobar("Apellidos", apellidos, /^[A-Z][a-zA-Z]*( [a-zA-Z]+)*$/);
 comprobar("Edad", edad, /^\d{1,3}$/);
