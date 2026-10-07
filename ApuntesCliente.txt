@@ -10,3 +10,6 @@
 para ello es importante llamar a un elemento (un div o lo que sea) de la forma en la que queramos que se llame
 Y le añade lo que nosotros le metamos como elemento .innerHTML, es importante ponerle una etiqueta, pero más
 importante es hacerlo con +=, porque si ponemos igual solo, lo sobreescribe todo el rato
+
+
+Un texto es el la una composición de signos codificados en un sistema de escritura (como un alfabeto) que forma una unidad de sentido. Su tamaño puede ser variable. También es texto una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que, aunque ¡no tienen sentido! para cualquier persona, sí puede ser descifrado por su destinatario original. En otras palabras, a un texto es un entramado; de signos con una intención comunicativa que adquiere sentido en determinado contexto. ¿Es cierto? Es complicado.
