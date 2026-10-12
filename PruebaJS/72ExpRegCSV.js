@@ -26,7 +26,8 @@ let nombreActual = null;
 let camposActuales = [];
 
 for (let valor of cadenaCSV.split(",")) {
-    let celda = valor.trim();
+    let celda = valor.trim();//sabrá dios por qué pero sin esto no me funciona,sale un array de 6 elementos guatefac
+                            //creo que es porque me pilla un espacioo en blanco al final de cada cadena y no lo coge bien
 
     if (esNombre(celda)) {
         if (nombreActual !== null) {
