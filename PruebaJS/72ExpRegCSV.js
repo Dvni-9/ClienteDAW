@@ -8,18 +8,23 @@ let esTelefono = valor => /^\d{9}$/.test(valor);
 let esCp = valor => /^\d{5}$/.test(valor);
 let esCodigo = valor => /^\d{4}[A-Z]{3}$/i.test(valor);
 
-let ordenarFila = (nombre, campos) => {
+function ordenarFila(nombre, campos) {
     let fila = [nombre, "", "", "", ""];
 
     for (let valor of campos) {
-        if (esDni(valor)) fila[1] = valor;
-        else if (esTelefono(valor)) fila[2] = valor;
-        else if (esCp(valor)) fila[3] = valor;
-        else if (esCodigo(valor)) fila[4] = valor;
+        if (esDni(valor)) {
+            fila[1] = valor;
+        } else if (esTelefono(valor)) {
+            fila[2] = valor;
+        } else if (esCp(valor)) {
+            fila[3] = valor;
+        } else if (esCodigo(valor)) {
+            fila[4] = valor;
+        }
     }
 
     return fila;
-};
+}
 
 const arrayOrdenado = [];
 let nombreActual = null;
