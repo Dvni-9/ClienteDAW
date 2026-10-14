@@ -17,7 +17,25 @@ hola.has("clave1");
 console.log(hola.values());
 console.log(hola.keys());
 console.log(hola.entries());
-hola.clear();
+// hola.clear();
 
 console.log("");
 console.log(mapa.entries())
+
+console.log("");
+for(var [clave, valor]of mapa){
+    console.log(clave + " = "+valor);
+}
+console.log("");
+for(var [clave, valor] in mapa){
+    console.log(clave + " = "+valor);
+}
+console.log(hola);
+console.log("");
+for(hola in valor){
+    console.log(valor); //esto sí printea algo, 6 veces valor2
+}
+console.log("");
+for(var valor2 in mapa){
+    console.log(valor);
+}
