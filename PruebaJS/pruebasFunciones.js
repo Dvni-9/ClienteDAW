@@ -139,3 +139,6 @@ console.log("masvalores");
 let other = [0,...morevalues];//si no ponemos los [...], te añade el array como Array, no los propios valores de dentro
 console.log(other);
 
+
+
+
