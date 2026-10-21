@@ -17,7 +17,7 @@ function alternarMayusMinus(texto) {
         }
     }
 
-    return resultado.join(" ");
+     return resultado.join(" ");
 }
 
 const textoOriginal = "O dios en Antonio Lobato, quieres saber cuánto vale tu coche";
