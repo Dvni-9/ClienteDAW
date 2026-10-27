@@ -29,3 +29,7 @@ palabraB = "holaloh"
 // let letras = palabra.toLowerCase().split("");
 console.log(palindromo(palabra));
 console.log(palindromo(palabraB));
+
+
+
+ 
