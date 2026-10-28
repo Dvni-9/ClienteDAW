@@ -189,6 +189,23 @@ let PrestarLibro = (biblioteca, titulo) => {
         biblioteca.splice(indice, 1);//encontrar la manera de quitar el if, hacerlo solo con findex y splice
     }
 };
+
+let PrestarLibro2 = (biblioteca, titulo) => {
+    let indice = biblioteca.findIndex((libro) => libro.nombre === titulo);
+    indice !== -1 && biblioteca.splice(indice, 1);
+};
+console.log("Lo nuevo");
+console.log(BIBLIOTECA);
+
+console.log("");
+PrestarLibro(BIBLIOTECA, "Libro ejemplo");
+console.log(BIBLIOTECA);
+
+console.log("");
+PrestarLibro2(BIBLIOTECA, "Crimen y castigo");
+console.log(BIBLIOTECA);
+
+
 //Devolver libro recibe la biblioteca y el libro y mete el libro en el array de biblioteca
 let DevolverLibro = (biblioteca, libro) => {
     biblioteca.push(libro);
