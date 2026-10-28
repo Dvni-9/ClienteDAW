@@ -100,7 +100,8 @@ const LIBRO4 ={
 }
 //crear un array biblioteca que represente una biblioteca y muestrala con console.log 8automáticamente que use el método toString)
 
-const BIBLIOTECA = [LIBRO1, LIBRO2, LIBRO4];
+let BIBLIOTECA = [LIBRO1, LIBRO2, LIBRO4];
+BIBLIOTECA = [...BIBLIOTECA, LIBRO3];
 console.log(BIBLIOTECA.toString());
 
 //recorre los libros de la bibliteca con for..of y muestra las editoriales
@@ -120,6 +121,8 @@ BIBLIOTECA.forEach((libro) => {console.log(libro.editorial);});
 // }};
 
 let CheckPages = (libro) => libro.npaginas >150; //lo mismo que la de arriba pero en una sola línea
+const LibrosLargos = BIBLIOTECA.filter(CheckPages);
+console.log(LibrosLargos.toString());
 
 console.log(CheckPages(LIBRO1));
 console.log(CheckPages(LIBRO2));
@@ -137,3 +140,30 @@ let contieneLibro = (biblioteca, libro) => {
 };
 
 console.log(contieneLibro(BIBLIOTECA, LIBRO2));
+
+let buscarLibroPorAutor = (autor, biblioteca) =>
+    biblioteca.find((libro) => libro.autor === autor);
+
+console.log(buscarLibroPorAutor("Ibañez", BIBLIOTECA));
+
+console.log(
+    buscarLibroPorAutor("J.R.R. Tolkien", BIBLIOTECA)
+        ? "Hay libros de Tolkien en la biblioteca."
+        : "No hay libros de Tolkien en la biblioteca."
+);
+
+
+
+ForraLibro(BIBLIOTECA);
+console.log(BIBLIOTECA.toString());
+
+let PrestarLibro = (biblioteca, titulo) => {
+    let indice = biblioteca.findIndex((libro) => libro.nombre === titulo);
+    if (indice !== -1) {
+        biblioteca.splice(indice, 1);
+    }
+};
+
+let DevolverLibro = (biblioteca, libro) => {
+    biblioteca.push(libro);
+};
