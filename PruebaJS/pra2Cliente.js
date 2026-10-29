@@ -191,8 +191,8 @@ let PrestarLibro = (biblioteca, titulo) => {
 };
 
 let PrestarLibro2 = (biblioteca, titulo) => {
-    let indice = biblioteca.findIndex((libro) => libro.nombre === titulo);
-    indice !== -1 && biblioteca.splice(indice, 1);
+    // (biblioteca.findIndex((libro) => libro.nombre === titulo) !== -1)&& 
+    biblioteca.splice(biblioteca.findIndex((libro) => libro.nombre === titulo), 1);
 };
 console.log("Lo nuevo");
 console.log(BIBLIOTECA);
