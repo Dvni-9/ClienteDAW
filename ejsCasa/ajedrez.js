@@ -1,4 +1,6 @@
-let tablero = new Array(8).fill().map(() => new Array(8));
+let tablero = new Array(8)
+.fill()
+.map(() => new Array(8));
 
 let figura = {
     x: 0,
