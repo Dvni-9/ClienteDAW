@@ -15,7 +15,7 @@ console.log(lu, mi);
 const { apellidos: [apellido1, apellido2] } = persona;
 console.log(apellido1, apellido2);
 
-function verDatos({ nombre = 'Luis', edad = 20 } = {}) {
+function verDatos({ nombre = 'Daniel', edad = 22 } = {}) {
   console.log(`Nombre: ${nombre}, Edad: ${edad}`);
 }
 
@@ -24,3 +24,5 @@ verDatos({ nombre: 'Ana' });
 verDatos({ edad: 35 });
 verDatos({});
 verDatos();
+
+//haz lo que pide el pdf
