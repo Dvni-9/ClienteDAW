@@ -1,37 +1,64 @@
 "use strict"
 export class Equipo{
-    id;
-    fecha;
-    descripcion;
-    personal;
+    #id;
+    #fecha;
+    #descripcion;
+    #personal;
 
     constructor(descripcion,personal,[dias]){
-        this.descripcion=descripcion;
-        this.personal=personal;
-        this.fecha=calcularFecha(dias);
+        this.#id = this.gerenarId();
+        this.#descripcion=descripcion;
+        this.#personal=personal;
+        this.#fecha=calcularFecha(dias);
     };
 
-    getId(){
-        return this.id;
+    get Id(){
+        return this.#id;
     };
-    getFecha(){
-        return this.fecha;
+    get Fecha(){
+        return this.#fecha;
     };
-    getDescripcion(){
-        return this.descripcion;
+    get Descripcion(){
+        return this.#descripcion;
 
     };
-    getPersonal(){
-        return this.personal;
+    get Personal(){
+        return this.#personal;
 
     };
-
+    toString(){
+        return this.#id;
+    }; 
     calcularDias(dias){
         const hoy= new Date;
-        if(hoy.getDay !=30 && hoy.getMonth != 5){
-            
+          if (dias !== undefined && dias !== null && !isNaN(dias)) {
+            const fechaFin = new Date(hoy);
+            fechaFin.setDate(hoy.getDate() + dias);
+            return fechaFin;
+        } else {
+            if(hoy.getMonth()>=8){
+                anioFin = hoy.getFullYear() +1;
+            } else{
+                anioFin = hoy.getFullYear();
+            }
+            return new Date(anioFin, 6, 30);
         }
+    };
+    gerenarId(){//X-ZZZ-ddd-mm-yyyy
+        let tipo;
+        if(this.#personal==true){
+            tipo = "P";
+        }else{
+            tipo = "s";
+        }
+        let ultimosTres = this.#descripcion.slice(-3);
+        let dia = this.#fecha.getDate();
+        let mes = this.#fecha.getMonth();
+        let anno = this.#fecha.getFullYear();
+
+        return `${tipo}-${ultimosTres}-${dia}-${mes}-${anno}`;
 
     };
+    
 
 }
