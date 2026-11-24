@@ -49,4 +49,8 @@ class Rio {
         return `Nombre: ${this.imprimeNombre()} Cuenca: ${this.imprimeCuenca()}, ` +
             `Caudal medio: ${this.imprimeCaudal()} Poblaciones: ${this.imprimePoblaciones()}`;
     }
+    agregarPoblacion(poblacion) {
+        if(!this.poblaciones.includes(poblacion)){
+            this.poblaciones
+        }
 }

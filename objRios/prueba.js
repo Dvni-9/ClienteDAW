@@ -23,3 +23,4 @@ mostrar("Poblaciones de rioB", rioB.imprimePoblaciones());
 
 rioB.eliminarPoblacion("Valladolid");
 mostrar("Poblaciones de rioB", rioB.imprimePoblaciones());
+

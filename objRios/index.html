@@ -1,14 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de ríos</title>
-    <script src="rio.js" defer></script>
-    <script src="prueba.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Gestión de Ríos</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.6;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 6px;
+      white-space: pre-wrap;
+    }
+    h1 {
+        color: red
+    }
+    pre{
+        color-scheme: dark;
+        color: blueviolet;
+
+    }
+
+  </style>
 </head>
 <body>
-    <h1>Gestión de ríos</h1>
-    <pre id="resultado"></pre>
+  <h1>Gestión de información sobre ríos</h1>
+  <pre id="salida"></pre>
+
+  <script>
+    
+    function mostrar(mensaje) {
+      console.log(mensaje);
+      document.getElementById("salida").textContent += mensaje + "\n";
+    }
+
+    class Rio {
+      constructor(nombre, cuenca) {
+        this.nombre = nombre;
+        this.cuenca = cuenca;
+        this.caudalMedio = null;
+        this.poblaciones = [];
+
+        mostrar(`nuevo rio ${this.nombre}, de la cuenca: ${this.cuenca}.`);
+      }
+
+      agregarPoblacion(poblacion) {
+        if (!this.poblaciones.includes(poblacion)) {
+          this.poblaciones.push(poblacion);
+        }
+        mostrar(`El rio ${this.nombre} pasa por ${poblacion}.`);
+      }
+
+      eliminarPoblacion(poblacion) {
+        const indice = this.poblaciones.indexOf(poblacion);
+        if (indice !== -1) {
+          this.poblaciones.splice(indice, 1);
+          mostrar(`El rio ${this.nombre} no pasa por ${poblacion}.`);
+        } else {
+          mostrar(`La población ${poblacion} no consta en el rio ${this.nombre}.`);
+        }
+      }
+
+      modificarCaudalmedio(numero) {
+        this.caudalMedio = numero;
+      }
+
+      imprimeNombre() {
+        return this.nombre;
+      }
+
+      imprimeCuenca() {
+        return this.cuenca;
+      }
+
+      imprimeCaudal() {
+        return this.caudalMedio !== null ? this.caudalMedio : "no consta";
+      }
+
+      imprimePoblaciones() {
+        return this.poblaciones.length > 0 ? this.poblaciones.join(", ") : "no consta";
+      }
+
+      imprimeRio() {
+        return `Nombre: ${this.nombre}, Cuenca: ${this.cuenca}, Caudal medio: ${this.imprimeCaudal()}, Poblaciones: ${this.imprimePoblaciones()}`;
+      }
+    }
+
+    // ==========================================
+    // PRUEBAS EN LA PÁGINA HTML
+    // ==========================================
+
+    mostrar("--- Instanciación de ríos ---");
+    const rioA = new Rio("Duero", "Atlántica");
+    const rioB = new Rio("Ebro", "Mediterránea");
+
+    mostrar("\n--- Llamada a todos los métodos de rioA ---");
+    mostrar("Nombre: " + rioA.imprimeNombre());
+    mostrar("Cuenca: " + rioA.imprimeCuenca());
+    mostrar("Caudal inicial: " + rioA.imprimeCaudal());
+    mostrar("Poblaciones iniciales: " + rioA.imprimePoblaciones());
+    mostrar("Info inicial: " + rioA.imprimeRio());
+
+    rioA.modificarCaudalmedio(650);
+    mostrar("Caudal modificado: " + rioA.imprimeCaudal());
+
+    rioA.agregarPoblacion("Soria");
+    rioA.agregarPoblacion("Zamora");
+    mostrar("Poblaciones tras añadir: " + rioA.imprimePoblaciones());
+
+    rioA.eliminarPoblacion("Soria");
+    mostrar("Poblaciones tras eliminar: " + rioA.imprimePoblaciones());
+    mostrar("Info final rioA: " + rioA.imprimeRio());
+
+    mostrar("\n--- Pruebas sobre rioB ---");
+    rioB.modificarCaudalmedio(50);
+    mostrar("Caudal rioB: " + rioB.imprimeCaudal());
+
+    rioB.agregarPoblacion("Miranda de Ebro");
+    rioB.agregarPoblacion("Tortosa");
+    rioB.agregarPoblacion("Valladolid");
+    mostrar("Poblaciones rioB: " + rioB.imprimePoblaciones());
+
+    rioB.eliminarPoblacion("Valladolid");
+    mostrar("Poblaciones rioB tras eliminar Valladolid: " + rioB.imprimePoblaciones());
+  </script>
 </body>
 </html>
