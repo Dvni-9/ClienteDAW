@@ -29,6 +29,15 @@ function multiplicarMatrices(A,B){
     // return A.map((filA)=> B[0].map()=>filA.reduce)
     return resultado;
 }
-console.table(A)
-console.table(B)
-console.table(multiplicarMatrices(A,B))
+console.table(A);
+console.table(B);
+console.table(multiplicarMatrices(A,B));
+
+for(let i =0; i<10; i++){
+
+    const filA = Math.floor(Math.random()*10)+1;
+    const colA = Math.floor(Math.random()*10)+1;
+    const filB = colA;
+    const colB = Math.floor(Math.random()*10)+1;
+    
+}

@@ -19,9 +19,7 @@ let cadena = "en un lugar de la mancha";
 
 
 // }
-const f4 = (cadena) => cadena-split(" ")
-    .map((n)=> n[0].toUppercase() + n.slice(i))
-    .reduce((fraseFinal, palabra) => fraseFinal +palabra);
+
 
 
 
@@ -38,7 +36,7 @@ let f5= (cadena)=>{
     }
     resultado = longitudes[0]/i;
 
-    return resultado;
+
 }
 // f6 devuelve un array con la longitud de cada una de las palabras que contengan la letra "a"
 let f6 = (cadena)=>{
@@ -57,6 +55,7 @@ let f6 = (cadena)=>{
 
 
 }
-console.log("camelCaseado : "+f4(cadena));
+
 console.log("LongitudMedia: "+f5(cadena));
 console.log("Longitud"+f6(cadena));
+
